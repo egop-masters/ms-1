@@ -1,5 +1,9 @@
 ﻿version: "3"
 
+networks:
+  masters:
+    external: true
+
 services:
   ms-1:
     image: ms-1
@@ -10,3 +14,5 @@ services:
       ASPNETCORE_URLS: "http://+:80"
     ports:
       - "80:80"
+    networks:
+      - masters
