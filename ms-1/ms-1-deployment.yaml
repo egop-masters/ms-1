@@ -1,0 +1,21 @@
+# ms-1-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-1
+  template:
+    metadata:
+      labels:
+        app: ms-1
+    spec:
+      containers:
+        - name: ms-1
+          image: ms-1:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080

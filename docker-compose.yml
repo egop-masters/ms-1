@@ -1,0 +1,12 @@
+﻿version: "3"
+
+services:
+  ms-1:
+    image: ms-1
+    build:
+      context: .
+      dockerfile: ms-1/Dockerfile
+    environment:
+      ASPNETCORE_URLS: "http://+:80"
+    ports:
+      - "80:80"
