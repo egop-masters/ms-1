@@ -12,7 +12,5 @@ services:
       dockerfile: Dockerfile
     environment:
       ASPNETCORE_URLS: "http://+:80"
-    ports:
-      - "80:80"
     networks:
       - masters
