@@ -4,8 +4,8 @@ services:
   ms-1:
     image: ms-1
     build:
-      context: .
-      dockerfile: ms-1/Dockerfile
+      context: ms-1
+      dockerfile: Dockerfile
     environment:
       ASPNETCORE_URLS: "http://+:80"
     ports:
